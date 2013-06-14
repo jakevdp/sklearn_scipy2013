@@ -78,6 +78,7 @@ Detailed Outline Tutorial 1 (intermediate track)
   + Flow chart: how do I choose what to do with my data set?
   + Exercise: Interactive Demo on linearly separable data
   + Regularization: what it is and why it is necessary
+    - Training set vs test set error
 - 2:00 - 2:15 -- Break (possibly in the middle of the previous section)
 - 2:15 - 3:00 -- Supervised Learning
   + Example of Classification: hand-written digits
