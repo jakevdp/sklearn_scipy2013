@@ -1,0 +1,5 @@
+*~
+*.pyc
+*.npy
+*.npz
+notebooks/figures/downloads/
