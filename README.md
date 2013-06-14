@@ -60,3 +60,55 @@ be able to be modified within nbviewer.  To modify them, first download
 the tutorial repository, change to the notebooks directory, and type
 ``ipython notebook``.  You should see the list in the ipython notebook
 launch page in your web browser.
+
+
+Detailed Outline Tutorial 1 (intermediate track)
+------------------------------------------------
+- 0:00 - 0:15 -- Setup and Introduction
+- 0:15 - 0:30 -- Quick review of data visualization with matplotlib and numpy
+- 0:30 - 1:00 -- Representation of data in machine learning
+  + Downloading data within scikit-learn
+  + Categorical & Image data
+  + Exercise: vectorization of text documents
+- 1:00 - 2:00 -- Basic principles of Machine Learning & the scikit-learn interface
+  + Supervised Learning: Classification & Regression
+  + Unsupervised Learning: Clustering & Dimensionality Reduction
+  + Example of PCA for data visualization
+  + Flow chart: how do I choose what to do with my data set?
+  + Exercise: Interactive Demo on linearly separable data
+  + Regularization: what it is and why it is necessary
+- 2:00 - 2:15 -- Break (possibly in the middle of the previous section)
+- 2:15 - 3:00 -- Supervised Learning
+  + Example of Classification: hand-written digits
+  + Cross-validation: measuring prediction accuracy
+  + Example of Regression: boston house prices
+- 3:00 - 4:15 -- Applications
+  + Examples from text mining
+  + Examples from image processing
+
+
+Detailed Outline Tutorial 2 (advanced track)
+--------------------------------------------
+- 0:00 - 0:30 -- Model validation and testing
+  + Bias, Variance, Over-fitting, Under-fitting
+  + Using validation curves & learning  to improve your model
+  + Exercise: Tuning a random forest for the digits data
+- 0:30 - 1:30 -- In depth with a few learners
+  + SVMs and kernels
+  + Trees and forests  Jake
+  + Sparse and non-sparse linear models  Gael
+- 1:30 - 2:00 -- Unsupervised Learning
+  + Example of Dimensionality Reduction: hand-written digits
+  + Example of Clustering: Olivetti Faces
+- 2:00 - 2:15 -- Pipelining learners
+  + Examples of unsupervised data reduction followed by supervised learning.
+- 2:15 - 2:30 -- Break (possibly in the middle of the previous section)
+- 2:30 - 3:00 -- Learning on big data (Olivier)
+  + Online learning:
+  + MiniBatchKmeans
+  + Stochastic Gradient Descent for linear models
+  + Data-reducing transforms: random-projections
+- 3:00 - 4:00 -- Parallel Machine Learning with IPython  (Olivier)
+  + IPython.parallel, a short primer
+  + Parallel Model Assessment and Selection
+  + Running a cluster on the EC2 cloud using StarCluster
