@@ -3,3 +3,4 @@
 *.npy
 *.npz
 notebooks/figures/downloads/
+*.ipynb_checkpoints
