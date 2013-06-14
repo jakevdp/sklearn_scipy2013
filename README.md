@@ -66,11 +66,12 @@ Detailed Outline Tutorial 1 (intermediate track)
 ------------------------------------------------
 - 0:00 - 0:15 -- Setup and Introduction
 - 0:15 - 0:30 -- Quick review of data visualization with matplotlib and numpy
-- 0:30 - 1:00 -- Representation of data in machine learning
+- 0:30 - 1:15 -- Representation of data in machine learning
   + Downloading data within scikit-learn
   + Categorical & Image data
+  + Feature extraction
   + Exercise: vectorization of text documents
-- 1:00 - 2:00 -- Basic principles of Machine Learning & the scikit-learn interface
+- 1:15 - 2:00 -- Basic principles of Machine Learning & the scikit-learn interface
   + Supervised Learning: Classification & Regression
   + Unsupervised Learning: Clustering & Dimensionality Reduction
   + Example of PCA for data visualization
