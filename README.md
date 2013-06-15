@@ -97,20 +97,20 @@ Detailed Outline Tutorial 2 (advanced track)
   + Exercise: Tuning a random forest for the digits data
 - 0:30 - 1:30 -- In depth with a few learners
   + SVMs and kernels
-  + Trees and forests  Jake
-  + Sparse and non-sparse linear models  Gael
+  + Trees and forests
+  + Sparse and non-sparse linear models
 - 1:30 - 2:00 -- Unsupervised Learning
   + Example of Dimensionality Reduction: hand-written digits
   + Example of Clustering: Olivetti Faces
 - 2:00 - 2:15 -- Pipelining learners
   + Examples of unsupervised data reduction followed by supervised learning.
 - 2:15 - 2:30 -- Break (possibly in the middle of the previous section)
-- 2:30 - 3:00 -- Learning on big data (Olivier)
+- 2:30 - 3:00 -- Learning on big data
   + Online learning:
   + MiniBatchKmeans
   + Stochastic Gradient Descent for linear models
   + Data-reducing transforms: random-projections
-- 3:00 - 4:00 -- Parallel Machine Learning with IPython  (Olivier)
+- 3:00 - 4:00 -- Parallel Machine Learning with IPython
   + IPython.parallel, a short primer
   + Parallel Model Assessment and Selection
   + Running a cluster on the EC2 cloud using StarCluster
