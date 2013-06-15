@@ -82,7 +82,7 @@ Detailed Outline Tutorial 1 (intermediate track)
 - 2:00 - 2:15 -- Break (possibly in the middle of the previous section)
 - 2:15 - 3:00 -- Supervised Learning
   + Example of Classification: hand-written digits
-  + Cross-validation: measuring prediction accuracy
+  + Measuring prediction performance
   + Example of Regression: boston house prices
 - 3:00 - 4:15 -- Applications
   + Examples from text mining
