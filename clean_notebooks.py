@@ -4,7 +4,13 @@ import sys
 import os
 import io
 from IPython.nbformat import current
-from IPython.kernel import KernelManager
+try:
+    from IPython.kernel import KernelManager
+    assert KernelManager  # to silence pyflakes
+except ImportError:
+    # 0.13
+    from IPython.zmq.blockingkernelmanager import BlockingKernelManager
+    KernelManager = BlockingKernelManager
 
 
 def remove_outputs(nb):
