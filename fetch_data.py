@@ -23,8 +23,9 @@ SENTIMENT140_ARCHIVE_NAME = "trainingandtestdata.zip"
 
 def get_datasets_folder():
     here = os.path.dirname(__file__)
-    datasets_folder = os.path.abspath(os.path.join(here, 'datasets'))
-    datasets_archive = os.path.abspath(os.path.join(here, 'datasets.zip'))
+    notebooks = os.path.join(here, 'notebooks')
+    datasets_folder = os.path.abspath(os.path.join(notebooks, 'datasets'))
+    datasets_archive = os.path.abspath(os.path.join(notebooks, 'datasets.zip'))
 
     if not os.path.exists(datasets_folder):
         if os.path.exists(datasets_archive):
