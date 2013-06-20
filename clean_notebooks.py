@@ -59,17 +59,17 @@ def run_notebook(nb):
 def clean_notebook_file(fname, do_check=False):
     print("Removing outputs for: " + fname)
     orig_wd = os.getcwd()
-
     with io.open(fname, 'rb') as f:
         nb = current.read(f, 'json')
+
     if do_check:
         os.chdir(os.path.dirname(fname))
         run_notebook(nb)
     remove_outputs(nb)
-    with io.open(fname, 'wb') as f:
-        nb = current.write(nb, f, 'json')
 
     os.chdir(orig_wd)
+    with io.open(fname, 'wb') as f:
+        nb = current.write(nb, f, 'json')
 
 
 if __name__ == '__main__':
