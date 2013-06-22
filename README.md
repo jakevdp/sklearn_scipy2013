@@ -12,9 +12,12 @@ This repository will contain files and other info associated with our Scipy
 
 Installation Notes
 ------------------
+
 This tutorial will require recent installations of *numpy*, *scipy*,
-*matplotlib*, *scikit-learn*, and *ipython* with ipython notebook.
-The last one is important: you should be able to type
+*matplotlib*, *scikit-learn*, *psutil*, *pyrallel* and *ipython* with ipython
+notebook.
+
+The last one is important, you should be able to type:
 
     ipython notebook
 
