@@ -3,9 +3,9 @@ Scipy 2013 Scikit-learn Tutorial
 
 Instructors
 -----------
-- Gael Varoquaux [@GaelVaroquaux](https://twitter.com/GaelVaroquaux) http://gael-varoquaux.info
-- Olivier Grisel [@ogrisel](https://twitter.com/ogrisel) http://ogrisel.com
-- Jake VanderPlas [@jakevdp](https://twitter.com/jakevdp) http://jakevdp.github.com
+- Gael Varoquaux [@GaelVaroquaux](https://twitter.com/GaelVaroquaux) | http://gael-varoquaux.info
+- Olivier Grisel [@ogrisel](https://twitter.com/ogrisel) | http://ogrisel.com
+- Jake VanderPlas [@jakevdp](https://twitter.com/jakevdp) | http://jakevdp.github.com
 
 This repository will contain files and other info associated with our Scipy
 2013 scikit-learn tutorial.
