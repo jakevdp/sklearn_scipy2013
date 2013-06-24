@@ -73,7 +73,6 @@ Detailed Outline Tutorial 1 (intermediate track)
   + Downloading data within scikit-learn
   + Categorical & Image data
   + Feature extraction
-  + Exercise: vectorization of text documents
 - 1:15 - 2:00 -- Basic principles of Machine Learning & the scikit-learn interface
   + Supervised Learning: Classification & Regression
   + Unsupervised Learning: Clustering & Dimensionality Reduction
@@ -108,12 +107,12 @@ Detailed Outline Tutorial 2 (advanced track)
 - 2:00 - 2:15 -- Pipelining learners
   + Examples of unsupervised data reduction followed by supervised learning.
 - 2:15 - 2:30 -- Break (possibly in the middle of the previous section)
-- 2:30 - 3:00 -- Learning on big data
-  + Online learning:
-  + MiniBatchKmeans
-  + Stochastic Gradient Descent for linear models
-  + Data-reducing transforms: random-projections
-- 3:00 - 4:00 -- Parallel Machine Learning with IPython
+- 2:30 - 3:15 -- Parallel Machine Learning with IPython
   + IPython.parallel, a short primer
   + Parallel Model Assessment and Selection
   + Running a cluster on the EC2 cloud using StarCluster
+- 3:15 - 4:00 -- Scaling Text Classification
+  + The hashing trick
+  + Online learning and out-of-core learning
+  + Stochastic Gradient Descent for linear models
+  + The Partition / Distribute / Average scaling scheme
