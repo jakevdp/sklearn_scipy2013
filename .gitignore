@@ -7,3 +7,4 @@ notebooks/figures/downloads/
 *.mmap
 *.pkl
 datasets
+joblib
