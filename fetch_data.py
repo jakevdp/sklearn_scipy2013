@@ -1,11 +1,7 @@
-import numpy as np
 import os
 import urllib
 import tarfile
 import zipfile
-import gzip
-from sklearn.datasets import load_files
-from sklearn.externals import joblib
 
 
 TWENTY_URL = ("http://people.csail.mit.edu/jrennie/"
@@ -18,7 +14,6 @@ TWENTY_TEST_FOLDER = "20news-bydate-test"
 SENTIMENT140_URL = ("http://cs.stanford.edu/people/alecmgo/"
                     "trainingandtestdata.zip")
 SENTIMENT140_ARCHIVE_NAME = "trainingandtestdata.zip"
-
 
 
 def get_datasets_folder():
@@ -48,7 +43,6 @@ def check_twenty_newsgroups(datasets_folder):
     train_path = os.path.join(datasets_folder, TWENTY_TRAIN_FOLDER)
     test_path = os.path.join(datasets_folder, TWENTY_TEST_FOLDER)
 
-
     if not os.path.exists(archive_path):
         print("Downloading dataset from %s (14 MB)" % TWENTY_URL)
         opener = urllib.urlopen(TWENTY_URL)
@@ -71,9 +65,9 @@ def check_sentiment140(datasets_folder):
     archive_path = os.path.join(datasets_folder, SENTIMENT140_ARCHIVE_NAME)
     sentiment140_path = os.path.join(datasets_folder, 'sentiment140')
     train_path = os.path.join(sentiment140_path,
-        'training.1600000.processed.noemoticon.csv')
+                              'training.1600000.processed.noemoticon.csv')
     test_path = os.path.join(sentiment140_path,
-        'testdata.manual.2009.06.14.csv')
+                             'testdata.manual.2009.06.14.csv')
 
     if not os.path.exists(archive_path):
         print("Downloading dataset from %s (77MB)" % SENTIMENT140_URL)
@@ -92,13 +86,12 @@ def check_sentiment140(datasets_folder):
     print("=> Success!")
 
 
-
 if __name__ == "__main__":
-    import sys
     datasets_folder = get_datasets_folder()
     check_twenty_newsgroups(datasets_folder)
     check_sentiment140(datasets_folder)
 
     print "Loading Labeled Faces Data (~200MB)"
     from sklearn.datasets import fetch_lfw_people
-    fetch_lfw_people(min_faces_per_person=70, resize=0.4)
+    fetch_lfw_people(min_faces_per_person=70, resize=0.4,
+                     data_home=datasets_folder)
