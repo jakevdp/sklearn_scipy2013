@@ -98,3 +98,7 @@ if __name__ == "__main__":
     datasets_folder = get_datasets_folder()
     check_twenty_newsgroups(datasets_folder)
     check_sentiment140(datasets_folder)
+
+    print "Loading Labeled Faces Data (~200MB)"
+    from sklearn.datasets import fetch_lfw_people
+    fetch_lfw_people(min_faces_per_person=70, resize=0.4)
