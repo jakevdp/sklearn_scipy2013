@@ -126,7 +126,7 @@ def run_notebook(nb):
     del km
 
 
-def process_notebook_file(fname, action='clean'):
+def process_notebook_file(fname, action='clean', output_fname=None):
     print("Performing '{}' on: {}".format(action, fname))
     orig_wd = os.getcwd()
     with io.open(fname, 'rb') as f:
@@ -136,7 +136,7 @@ def process_notebook_file(fname, action='clean'):
         os.chdir(os.path.dirname(fname))
         run_notebook(nb)
         remove_outputs(nb)
-    elif action == 'collect':
+    elif action == 'render':
         os.chdir(os.path.dirname(fname))
         run_notebook(nb)
     else:
@@ -144,7 +144,9 @@ def process_notebook_file(fname, action='clean'):
         remove_outputs(nb)
 
     os.chdir(orig_wd)
-    with io.open(fname, 'wb') as f:
+    if output_fname is None:
+        output_fname = fname
+    with io.open(output_fname, 'wb') as f:
         nb = current.write(nb, f, 'json')
 
 
@@ -153,7 +155,12 @@ if __name__ == '__main__':
     args = sys.argv[1:]
     targets = [t for t in args if not t.startswith('--')]
     action = 'check' if '--check' in args else 'clean'
-    action = 'collect' if '--collect-output' in args else action
+    action = 'render' if '--render' in args else action
+
+    rendered_folder = os.path.join(os.path.dirname(__file__),
+                                   'rendered_notebooks')
+    if not os.path.exists(rendered_folder):
+        os.makedirs(rendered_folder)
     if not targets:
         targets = [os.path.join(os.path.dirname(__file__), 'notebooks')]
 
@@ -165,4 +172,10 @@ if __name__ == '__main__':
         else:
             fnames = [target]
         for fname in fnames:
-            process_notebook_file(fname, action=action)
+            if action == 'render':
+                output_fname = os.path.join(rendered_folder,
+                                            os.path.basename(fname))
+            else:
+                output_fname = fname
+            process_notebook_file(fname, action=action,
+                                  output_fname=output_fname)
