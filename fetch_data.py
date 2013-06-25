@@ -95,3 +95,4 @@ if __name__ == "__main__":
     from sklearn.datasets import fetch_lfw_people
     fetch_lfw_people(min_faces_per_person=70, resize=0.4,
                      data_home=datasets_folder)
+    print("=> Success!")
