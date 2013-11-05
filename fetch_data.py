@@ -69,14 +69,14 @@ def check_sentiment140(datasets_folder):
     test_path = os.path.join(sentiment140_path,
                              'testdata.manual.2009.06.14.csv')
 
-    if not os.path.exists(archive_path):
-        print("Downloading dataset from %s (77MB)" % SENTIMENT140_URL)
-        opener = urllib.urlopen(SENTIMENT140_URL)
-        open(archive_path, 'wb').write(opener.read())
-    else:
-        print("Found archive: " + archive_path)
-
     if not os.path.exists(sentiment140_path):
+        if not os.path.exists(archive_path):
+            print("Downloading dataset from %s (77MB)" % SENTIMENT140_URL)
+            opener = urllib.urlopen(SENTIMENT140_URL)
+            open(archive_path, 'wb').write(opener.read())
+        else:
+            print("Found archive: " + archive_path)
+
         print("Extracting %s to %s" % (archive_path, sentiment140_path))
         zf = zipfile.ZipFile(archive_path)
         zf.extractall(sentiment140_path)
